@@ -2,9 +2,9 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class SearchIssueSelenide {
+public class SelenideSearch {
 
-    SearchIssuePage searchIssuePage = new SearchIssuePage();
+    SearchPage searchPage = new SearchPage();
 
     @BeforeAll
     static void setup() {
@@ -13,7 +13,7 @@ public class SearchIssueSelenide {
 
     @Test
     void searchIssueSelenide() {
-        searchIssuePage
+        searchPage
                 .openPage()
                 .inputSearch()
                 .goToRepo()

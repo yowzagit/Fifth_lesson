@@ -19,6 +19,10 @@ tasks.withType(JavaCompile) {
 allure {
     autoconfigure = true
     version = "2.13.6"
+
+    aspectjweaver = true
+    aspectjVersion = "1.9.5"
+
     useJUnit5 {
         version = "2.13.6"
     }

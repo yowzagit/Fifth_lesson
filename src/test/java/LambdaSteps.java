@@ -1,26 +1,33 @@
+import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class SearchIssueSteps {
-    SearchIssuePage searchIssuePage = new SearchIssuePage();
+public class LambdaSteps {
+    SearchPage searchPage = new SearchPage();
+
+    @BeforeAll
+    static void setup() {
+        Configuration.startMaximized = true;
+    }
 
     @Test
     void SearchIssueStepsAllure() {
         step("Открываем главную страницу", () -> {
-            searchIssuePage.openPage();
+            searchPage.openPage();
         });
         step("Вводим в поиск название репозитория", () -> {
-            searchIssuePage.inputSearch();
+            searchPage.inputSearch();
         });
         step("Переходим в репозиторий", () -> {
-            searchIssuePage.goToRepo();
+            searchPage.goToRepo();
         });
         step("Переходим в таб Issue", () -> {
-            searchIssuePage.goToIssue();
+            searchPage.goToIssue();
         });
         step("Проверяем значение Issue", () -> {
-            searchIssuePage.issueVer();
+            searchPage.issueVer();
         });
 
     }

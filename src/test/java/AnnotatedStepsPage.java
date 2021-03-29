@@ -1,45 +1,38 @@
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SearchIssuePage {
+public class AnnotatedStepsPage {
+
     String siteName = "https://github.com/",
-            repository = "eroshenkoam/allure-example",
             tab = "Issues";
-    Integer issueNumber = 68;
 
-
-    public SearchIssuePage openPage() {
+    @Step
+    public void openMainPage() {
         open(siteName);
-
-        return this;
     }
 
-    public SearchIssuePage inputSearch() {
+    @Step
+    public void searchForRepository(String repository){
         $(byName("q")).setValue(repository).pressEnter();
-
-        return this;
     }
 
-    public SearchIssuePage goToRepo() {
+    @Step
+    public void goToRepository(String repository){
         $(byLinkText(repository)).click();
-
-        return this;
     }
 
-    public SearchIssuePage goToIssue() {
+    @Step
+    public void clickOnIssueTab(){
         $(withText(tab)).click();
-
-        return this;
     }
 
-    public SearchIssuePage issueVer() {
+    @Step
+    public void shouldSeeIssueWithNumber(int issueNumber){
         $(withText("#" + issueNumber)).should(Condition.exist);
-
-        return this;
     }
-
 }
