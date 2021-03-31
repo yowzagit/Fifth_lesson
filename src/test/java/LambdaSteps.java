@@ -13,7 +13,7 @@ public class LambdaSteps {
     }
 
     @Test
-    void SearchIssueStepsAllure() {
+    void searchIssueStepsAllure() {
         step("Открываем главную страницу", () -> {
             searchPage.openPage();
         });
