@@ -29,13 +29,6 @@ allure {
 }
 
 dependencies {
-    compile "org.slf4j:slf4j-simple:1.7.9"
-    compile("com.squareup.retrofit2:retrofit:2.9.0")
-    compile("com.squareup.retrofit2:converter-jackson:2.9.0")
-    compile("com.squareup.okhttp3:logging-interceptor:3.9.0")
-    compile("io.qameta.allure:allure-selenide:2.13.6")
-    compile("org.junit.jupiter:junit-jupiter-params:5.7.0")
-
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
             "com.github.javafaker:javafaker:1.0.2",
