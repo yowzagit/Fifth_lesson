@@ -1,10 +1,13 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import pages.SearchPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class LambdaSteps {
+public class LambdaStepsTests {
     SearchPage searchPage = new SearchPage();
 
     @BeforeAll

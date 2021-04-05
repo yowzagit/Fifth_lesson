@@ -1,8 +1,11 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import pages.AnnotatedStepsPage;
 
-public class AnnotatedSteps {
+public class AnnotatedStepsTests {
 
     private final static String repository = "eroshenkoam/allure-example";
     private final static int issueNumber = 68;
